@@ -9,7 +9,7 @@ function keyCode(keypress){
     if(keypress===43){
         operand1=parseFloat(text);
         console.log(operand1);
-        historyDisplay.textContent=operand1+" +";
+        historyDisplay.textContent=operand1+"+";
         display.textContent="";
         return operator='+';
       
@@ -187,7 +187,6 @@ document.getElementById("1").classList.remove("animate");
    return operator="*";
   }
   else if(keypress===61){
-    
     document.getElementById("0").classList.remove("animate");
     document.getElementById("2").classList.remove("animate");
     document.getElementById("3").classList.remove("animate");
@@ -198,16 +197,21 @@ document.getElementById("1").classList.remove("animate");
     document.getElementById("8").classList.remove("animate");
     document.getElementById("9").classList.remove("animate");
     document.getElementById("1").classList.remove("animate");
-     operand2=parseFloat(text);
-     console.log(operand2);
-     var output=eval(operand1+' ' + operator+ ' ' +operand2)
- 
-     display.textContent=output;
+    operand2=parseFloat(text);
+    console.log(operand2);
+    var output=eval(operand1+' ' + operator+ ' ' +operand2)
+    if(isNaN(operand2)){
+        display.textContent=operand1;
+    }else{
+  display.textContent=output;
     historyDisplay.textContent="";
+    }
+ }
+
 
   }
   
-}
+
 
 
 
@@ -228,6 +232,7 @@ window.addEventListener("keydown",function(event){
 }
 else if(event.keyCode==27){
     display.textContent="";
+    historyDisplay.textContent="";
     document.getElementById("0").classList.remove("animate");
     document.getElementById("2").classList.remove("animate");
     document.getElementById("3").classList.remove("animate");
