@@ -14,45 +14,146 @@ function keyCode(keypress){
         return operator='+';
       
   }
-  else if(keypress==8){
-      console.log("backspace");
-      display.textContent="";
-  }
+ 
   
   else if(keypress===49){
           console.log("1");
           display.textContent +="1";
+document.getElementById("1").classList.add("animate");
+document.getElementById("2").classList.remove("animate");
+document.getElementById("3").classList.remove("animate");
+document.getElementById("4").classList.remove("animate");
+document.getElementById("5").classList.remove("animate");
+document.getElementById("6").classList.remove("animate");
+document.getElementById("7").classList.remove("animate");
+document.getElementById("8").classList.remove("animate");
+document.getElementById("9").classList.remove("animate");
+document.getElementById("0").classList.remove("animate");
+
+          
       }
     
   else if(keypress===50){
           console.log("2");
           display.textContent +="2";
+          document.getElementById("2").classList.add("animate");
+          document.getElementById("1").classList.remove("animate");
+          document.getElementById("3").classList.remove("animate");
+document.getElementById("4").classList.remove("animate");
+document.getElementById("5").classList.remove("animate");
+document.getElementById("6").classList.remove("animate");
+document.getElementById("7").classList.remove("animate");
+document.getElementById("8").classList.remove("animate");
+document.getElementById("9").classList.remove("animate");
+document.getElementById("0").classList.remove("animate");
       }
   else  if(keypress===51){
           display.textContent +="3";
+          document.getElementById("3").classList.add("animate");
+          document.getElementById("2").classList.remove("animate");
+document.getElementById("1").classList.remove("animate");
+document.getElementById("4").classList.remove("animate");
+document.getElementById("5").classList.remove("animate");
+document.getElementById("6").classList.remove("animate");
+document.getElementById("7").classList.remove("animate");
+document.getElementById("8").classList.remove("animate");
+document.getElementById("9").classList.remove("animate");
+document.getElementById("0").classList.remove("animate");
+
+        
       }
   
   else   if(keypress===52){
           display.textContent +="4";
+          document.getElementById("4").classList.add("animate");
+document.getElementById("2").classList.remove("animate");
+document.getElementById("3").classList.remove("animate");
+document.getElementById("1").classList.remove("animate");
+document.getElementById("5").classList.remove("animate");
+document.getElementById("6").classList.remove("animate");
+document.getElementById("7").classList.remove("animate");
+document.getElementById("8").classList.remove("animate");
+document.getElementById("9").classList.remove("animate");
+document.getElementById("0").classList.remove("animate");
       }
   
   else  if(keypress===53){
           display.textContent +="5";
+          document.getElementById("5").classList.add("animate");
+document.getElementById("2").classList.remove("animate");
+document.getElementById("3").classList.remove("animate");
+document.getElementById("4").classList.remove("animate");
+document.getElementById("1").classList.remove("animate");
+document.getElementById("6").classList.remove("animate");
+document.getElementById("7").classList.remove("animate");
+document.getElementById("8").classList.remove("animate");
+document.getElementById("9").classList.remove("animate");
+document.getElementById("0").classList.remove("animate");
       }
   else  if(keypress===54){
           display.textContent +="6";
+          document.getElementById("6").classList.add("animate");
+document.getElementById("2").classList.remove("animate");
+document.getElementById("3").classList.remove("animate");
+document.getElementById("4").classList.remove("animate");
+document.getElementById("5").classList.remove("animate");
+document.getElementById("1").classList.remove("animate");
+document.getElementById("7").classList.remove("animate");
+document.getElementById("8").classList.remove("animate");
+document.getElementById("9").classList.remove("animate");
+document.getElementById("0").classList.remove("animate");
       }
   else  if(keypress===55){
           display.textContent +="7";
+          document.getElementById("7").classList.add("animate");
+document.getElementById("2").classList.remove("animate");
+document.getElementById("3").classList.remove("animate");
+document.getElementById("4").classList.remove("animate");
+document.getElementById("5").classList.remove("animate");
+document.getElementById("6").classList.remove("animate");
+document.getElementById("1").classList.remove("animate");
+document.getElementById("8").classList.remove("animate");
+document.getElementById("9").classList.remove("animate");
+document.getElementById("0").classList.remove("animate");
       }
   else if(keypress===56){
           display.textContent +="8";
+          document.getElementById("8").classList.add("animate");
+document.getElementById("2").classList.remove("animate");
+document.getElementById("3").classList.remove("animate");
+document.getElementById("4").classList.remove("animate");
+document.getElementById("5").classList.remove("animate");
+document.getElementById("6").classList.remove("animate");
+document.getElementById("7").classList.remove("animate");
+document.getElementById("1").classList.remove("animate");
+document.getElementById("9").classList.remove("animate");
+document.getElementById("0").classList.remove("animate");
       }
   else if(keypress===57){
           display.textContent +="9";
+          document.getElementById("9").classList.add("animate");
+document.getElementById("2").classList.remove("animate");
+document.getElementById("3").classList.remove("animate");
+document.getElementById("4").classList.remove("animate");
+document.getElementById("5").classList.remove("animate");
+document.getElementById("6").classList.remove("animate");
+document.getElementById("7").classList.remove("animate");
+document.getElementById("8").classList.remove("animate");
+document.getElementById("1").classList.remove("animate");
+document.getElementById("0").classList.remove("animate");
       }
   else if(keypress===48){
           display.textContent +="0";
+          document.getElementById("0").classList.add("animate");
+document.getElementById("2").classList.remove("animate");
+document.getElementById("3").classList.remove("animate");
+document.getElementById("4").classList.remove("animate");
+document.getElementById("5").classList.remove("animate");
+document.getElementById("6").classList.remove("animate");
+document.getElementById("7").classList.remove("animate");
+document.getElementById("8").classList.remove("animate");
+document.getElementById("9").classList.remove("animate");
+document.getElementById("1").classList.remove("animate");
       }
       else if(keypress===46){
         display.textContent +=".";
@@ -95,7 +196,9 @@ function keyCode(keypress){
      display.textContent=output;
     historyDisplay.textContent="";
 
-  }};
+  }
+  
+}
 
 
 
@@ -117,6 +220,7 @@ window.addEventListener("keydown",function(event){
 else if(event.keyCode==27){
     display.textContent="";
 }
+
 });
 
 if(output==NaN){
