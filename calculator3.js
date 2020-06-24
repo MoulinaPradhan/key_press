@@ -8,7 +8,7 @@ function keyCode(keypress){
     var value;
     if(keypress===43){
         operand1=parseFloat(text);
-        console.log(operand1);
+        
         historyDisplay.textContent=operand1+"+";
         display.textContent="";
         return operator='+';
@@ -17,7 +17,7 @@ function keyCode(keypress){
  
   
   else if(keypress===49){
-          console.log("1");
+          
           display.textContent +="1";
 document.getElementById("1").classList.add("animate");
 document.getElementById("2").classList.remove("animate");
@@ -34,7 +34,7 @@ document.getElementById("0").classList.remove("animate");
       }
     
   else if(keypress===50){
-          console.log("2");
+         
           display.textContent +="2";
           document.getElementById("2").classList.add("animate");
           document.getElementById("1").classList.remove("animate");
@@ -160,28 +160,28 @@ document.getElementById("1").classList.remove("animate");
     }
   else if(keypress===45){
       operand1=parseFloat(text);
-          console.log(operand1);
+          
           historyDisplay.textContent=operand1+"-";
           display.textContent="";
          return operator="-";
       }
   else if(keypress===47){
       operand1=parseFloat(text);
-      console.log(operand1);
+      
       historyDisplay.textContent=operand1+"/";
       display.textContent="";
      return operator="/";
   }
   else if(keypress===42){
       operand1=parseFloat(text);
-      console.log(operand1);
+      
       historyDisplay.textContent=operand1+"*";
       display.textContent="";
      return operator="*";
   }
   else if(keypress===37){
     operand1=parseFloat(text)/100;
-    console.log(operand1);
+    
     historyDisplay.textContent=operand1;
     display.textContent="";
    return operator="*";
@@ -198,7 +198,7 @@ document.getElementById("1").classList.remove("animate");
     document.getElementById("9").classList.remove("animate");
     document.getElementById("1").classList.remove("animate");
     operand2=parseFloat(text);
-    console.log(operand2);
+    
     var output=eval(operand1+' ' + operator+ ' ' +operand2)
     if(isNaN(operand2)){
         display.textContent=operand1;
