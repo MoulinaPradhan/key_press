@@ -1,7 +1,7 @@
 var display=document.getElementById("output-value");
 var historyDisplay=document.getElementById("history-value")
 
-//added//
+
 
 function keyCode(keypress){
     var text=display.textContent.trim();
@@ -187,8 +187,17 @@ document.getElementById("1").classList.remove("animate");
    return operator="*";
   }
   else if(keypress===61){
-    var result=eval(history);
-
+    
+    document.getElementById("0").classList.remove("animate");
+    document.getElementById("2").classList.remove("animate");
+    document.getElementById("3").classList.remove("animate");
+    document.getElementById("4").classList.remove("animate");
+    document.getElementById("5").classList.remove("animate");
+    document.getElementById("6").classList.remove("animate");
+    document.getElementById("7").classList.remove("animate");
+    document.getElementById("8").classList.remove("animate");
+    document.getElementById("9").classList.remove("animate");
+    document.getElementById("1").classList.remove("animate");
      operand2=parseFloat(text);
      console.log(operand2);
      var output=eval(operand1+' ' + operator+ ' ' +operand2)
@@ -219,6 +228,16 @@ window.addEventListener("keydown",function(event){
 }
 else if(event.keyCode==27){
     display.textContent="";
+    document.getElementById("0").classList.remove("animate");
+    document.getElementById("2").classList.remove("animate");
+    document.getElementById("3").classList.remove("animate");
+    document.getElementById("4").classList.remove("animate");
+    document.getElementById("5").classList.remove("animate");
+    document.getElementById("6").classList.remove("animate");
+    document.getElementById("7").classList.remove("animate");
+    document.getElementById("8").classList.remove("animate");
+    document.getElementById("9").classList.remove("animate");
+    document.getElementById("1").classList.remove("animate");
 }
 
 });
